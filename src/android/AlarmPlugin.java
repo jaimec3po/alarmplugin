@@ -9,7 +9,7 @@ import org.apache.cordova.api.CordovaPlugin;
 import org.json.JSONArray;
 import org.json.JSONException;
 
-import co.gov.senalradionica.MainActivity;
+import co.gov.senalradionica.HelloWorld2;
 
 
 import android.app.AlarmManager;
@@ -69,7 +69,7 @@ public class AlarmPlugin extends CordovaPlugin {
 		AlarmManager alarmManager = (AlarmManager)this.cordova.getActivity().getSystemService(Context.ALARM_SERVICE);
 				
 		// Create a Pending Intent that will broadcast and action String ALARM_ACTION
-		Intent intentToFire = new Intent(this.cordova.getActivity(), MainActivity.class);
+		Intent intentToFire = new Intent(this.cordova.getActivity(), HelloWorld2.class);
 		intentToFire.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
 		
 		for(int i = 1; i < 8; i++){
